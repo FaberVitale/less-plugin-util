@@ -1,0 +1,24 @@
+{
+  "name": "less-plugin-util",
+  "version": "0.1.0",
+  "description": "a set of useful functions for less",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "less plugin",
+    "less",
+    "function"
+  ],
+  "author": "Fabrizio Armando Vitale",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FaberVitale/less-plugin-util"
+  },
+  "devDependencies": {
+    "less": "^2.7.1",
+    "mocha": "^3.2.0"
+  }
+}
