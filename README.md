@@ -14,4 +14,4 @@ if(bool: boolean, left: any, right: any) | returns left if bool is true, otherwi
 
 version 0.1.0
 
-**Licence** [MIT](https://github.com/FaberVitale/less-plugin-util/blob/master/LICENSE)
+**License** [MIT](https://github.com/FaberVitale/less-plugin-util/blob/master/LICENSE)
