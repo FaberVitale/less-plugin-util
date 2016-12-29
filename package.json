@@ -1,6 +1,6 @@
 {
   "name": "less-plugin-util",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a set of useful functions for less",
   "main": "lib/index.js",
   "scripts": {
