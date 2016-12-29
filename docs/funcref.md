@@ -44,7 +44,7 @@ p {
 ##### Syntax: 
     type(elem :Node): string
 ##### Description:
-returns the internal type, [a subtype of node](https://github.com/less/less.js/tree/3.x/lib/less/tree), of elem as a string.
+returns the internal type of *elem*, [a subtype of node](https://github.com/less/less.js/tree/3.x/lib/less/tree), as a string.
 
 **return type**: string
 
@@ -131,11 +131,11 @@ p {
 ##### Syntax: 
     if(bool: boolean, left: any, right: any): any
 ##### Description:
-returns left if bool is true, otherwise returns right.
+returns *left* if bool is true, otherwise returns *right*.
 Note: [every value but the keyword true is falsy](http://lesscss.org/features/#mixin-guards-feature-guard-comparison-operators) 
 
 
-**return type**: type of left if bool is true, 
+**return type**: type of *left* if bool is true, type of *right* otherwise 
 
 **throws**: error if less than 3 arguments are provided.
 
