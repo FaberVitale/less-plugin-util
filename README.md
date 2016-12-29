@@ -1,17 +1,27 @@
 ## less-plugin-util
-A set of useful functions for [Less](http://www.lesscss.org/)
+A set of useful functions for [Less](http://www.lesscss.org/) 
+
+[![npm version](https://badge.fury.io/js/less-plugin-util.svg)](https://badge.fury.io/js/less-plugin-util)
+
+### Install
+    npm install -g less-plugin-util
+
+### Using lessc
+    lessc --util example.less
+
+### Programmatic Usage
+See [Using a plugin in code](http://lesscss.org/usage/#plugins-using-a-plugin-in-code).
+
 
 
 ### Functions
-Function | Description
----------------------------- | ----------------------------
-isfunction(funcName: string): boolean | returns true if *funcName* function is available, false otherwise.
-type(node: Node): string | returns the subtype of Node passed as argument.
-call(funcName: string, arg1, arg2,...) | dynamically calls a function *funcName* with arguments provided individually  
-apply(funcName: string, args: list) | dynamically calls a function *funcName* with arguments provided as a list  
-if(bool: boolean, left: any, right: any): any | returns left if bool is true, otherwise returns right. Note: [every value but the keyword true is falsy](http://lesscss.org/features/#mixin-guards-feature-guard-comparison-operators) 
+* [isfunction](docs/funcref.md/#isfunction)
+* [type](docs/funcref.md/#type)
+* [call](docs/funcref.md/#call)
+* [apply](docs/funcref.md/#apply)
+* [if](docs/funcref.md/#if)
 
 
-version 0.1.0
+**version**: [0.1.1](changelog.md)
 
 **License**: [MIT](https://github.com/FaberVitale/less-plugin-util/blob/master/LICENSE)
