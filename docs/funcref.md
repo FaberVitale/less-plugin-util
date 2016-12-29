@@ -2,8 +2,8 @@
 ### Function Reference
 
 
-- [isfunction](#isfunction)        - returns true if function is available, false otherwise
-- [type](#type)       - returns the internal type of the node passed as arguement
+- [isfunction](#isfunction)        - returns true if function is available, false otherwise.
+- [type](#type)       - returns the internal type of the node passed as arguement.
 - [call](#call)   - dynamically calls a function *funcName* with arguments provided individually. 
 - [apply](#apply)      - dynamically calls a function *funcName* with arguments provided as a list. 
 - [if](#if)         - returns *left* if *bool* is true, otherwise returns *right*.
@@ -14,10 +14,10 @@
 ##### Syntax: 
     isfunction(funcName :string): boolean
 ##### Description:
-Accepts the name of a function passed as string
-returns true if the function is available, false otherwise:
+Accepts the name of a function passed as string.
+Returns true if the function is available, false otherwise:
 
-a function is available if it is a [built-in function](http://lesscss.org/functions/) or 
+a function is available, if it is a [built-in function](http://lesscss.org/functions/) or 
 is added via plugin to function registry.
 
 **return type**: boolean
@@ -46,9 +46,9 @@ p {
 ##### Description:
 returns the internal type of *elem*, [a subtype of node](https://github.com/less/less.js/tree/3.x/lib/less/tree), as a string.
 
-**return type**: string
+**return type**: string.
 
-**throws**: error if no argument is provided
+**throws**: error if no argument is provided.
 
 ##### Example:
 *less*
@@ -89,7 +89,7 @@ p {
 
 ```css
 p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -109,7 +109,7 @@ dynamically calls a function *funcName* with arguments provided as a list.
 ```less
 @border-col: 255 255 255;
 @list: 5px, 10px, 3px;
-@col: "cornflowerBlue"
+@col: "cornflowerBlue";
 p {
   border-color: apply("rgb", @border-col);
   margin-top: apply("min", @list);
@@ -120,7 +120,7 @@ p {
 
 ```css
 p {
-  border-color: #FFFFFF;
+  border-color: #ffffff;
   margin-top: 3px;
   color: #6495ed;
 }
@@ -135,28 +135,25 @@ returns *left* if bool is true, otherwise returns *right*.
 Note: [every value but the keyword true is falsy](http://lesscss.org/features/#mixin-guards-feature-guard-comparison-operators) 
 
 
-**return type**: type of *left* if bool is true, type of *right* otherwise 
+**return type**: type of *left* if bool is true, type of *right* otherwise. 
 
 **throws**: error if less than 3 arguments are provided.
 
 ##### Example:
 *less*
 ```less
-@border-col: 255 255 255;
-@list: 5px, 10px, 3px;
-@col: "cornflowerBlue"
-p {
-  border-color: apply("rgb", @border-col);
-  margin-top: apply("min", @list);
-  color: apply("color", @col);
+@content-asterisk: "*";
+@content-none: "";
+@is-content-none: true;
+
+.item::before {
+  content: if(@is-content-none, @content-none, @content-asterisk);
 }
 ```
 *css*
 
 ```css
-p {
-  border-color: #FFFFFF;
-  margin-top: 3px;
-  color: #6495ed;
+.item::before {
+  content: "";  
 }
 ```
