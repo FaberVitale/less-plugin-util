@@ -6,7 +6,7 @@
 - [type](#type)       - returns the internal type of the node passed as arguement
 - [call](#call)   - dynamically calls a function *funcName* with arguments provided individually. 
 - [apply](#apply)      - dynamically calls a function *funcName* with arguments provided as a list. 
-- [if](#if)         - returns left if bool is true, otherwise returns right.
+- [if](#if)         - returns *left* if *bool* is true, otherwise returns *right*.
 
 
 ### isfunction
