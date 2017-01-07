@@ -1,14 +1,11 @@
 //isfunction.js
 const assert = require("assert");
 const less = require("less");
-const plugin = require("..");
-
-
+const plugin = require("../../");
 
 const isFunctionTest =
     describe("isfunction()", function () {
         it("should be registered", function (done) {
-
             less.render("p{exist: isfunction('isfunction');}", { plugins: [plugin] })
                 .then(out => {
                     assert(out.css.includes("true"));

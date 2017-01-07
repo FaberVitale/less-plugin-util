@@ -1,7 +1,7 @@
 //if.js
 const assert = require("assert");
 const less = require("less");
-const plugin = require("..");
+const plugin = require("../../");
 
 const ifTest =
     describe("if()", function () {
@@ -40,3 +40,5 @@ const ifTest =
                 .catch(err => done(err));
         });
     });
+
+module.exports = ifTest;

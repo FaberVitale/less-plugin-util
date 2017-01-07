@@ -1,7 +1,7 @@
 // apply.js
 const assert = require("assert");
 const less = require("less");
-const plugin = require("..");
+const plugin = require("../../");
 
 const applyTest =
     describe("apply()", function () {
@@ -14,6 +14,7 @@ const applyTest =
                 .catch(err => done(err));
         });
 
+        //see https://github.com/less/less.js/blob/master/lib/less/functions/function-registry.js
         it("should throw error for unregistered functions", function (done) {
             less.render("p{error: apply('?INVALID-FUNC-name?');}", { plugins: [plugin] })
                 .then(out => {
@@ -65,4 +66,6 @@ const applyTest =
                 .catch(err => done());
         });
     });
+
+module.exports = applyTest;
 

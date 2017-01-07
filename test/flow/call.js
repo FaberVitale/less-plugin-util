@@ -1,7 +1,7 @@
 //call.js
 const assert = require("assert");
 const less = require("less");
-const plugin = require("..");
+const plugin = require("../../");
 
 const callTest =
     describe("call()", function () {
@@ -47,3 +47,5 @@ const callTest =
                 .catch(err => done());
         });
     });
+
+module.exports = callTest;

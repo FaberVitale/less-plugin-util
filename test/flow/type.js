@@ -1,7 +1,7 @@
 //type.js
 const assert = require("assert");
 const less = require("less");
-const plugin = require("..");
+const plugin = require("../../");
 
 const typeTest =
     describe("type()", function () {
@@ -31,3 +31,5 @@ const typeTest =
                 .catch(err => done());
         });
     });
+
+module.exports = typeTest;
